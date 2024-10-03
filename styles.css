@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/kitchen-police');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +9,7 @@
 
 body {
     color:#edf0f1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -14,20 +17,29 @@ header {
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
-    padding:30px 10%;   
+    padding:30px 10%;  
+    position: fixed; 
+    width:100%;
+    z-index: 1000000;
 }
+
 
 .logo_link {
     cursor:pointer;
-    margin-right:auto;
+    margin:auto;
 }
 .logo {
     width:150px;
+    position: absolute;
+    top:60px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
 }
 
 li, a, button {
     font-family: Arial, Helvetica, sans-serif;
-    margin:0 5px;
+    margin:0 3px;
     font-weight:500;
     font-size: 16px;
     text-decoration: none;
@@ -51,11 +63,21 @@ li, a, button {
     color:blue;
 }
 
+.nav__links .active {
+    text-underline-offset: 10px;
+    text-decoration: underline 4px blue;
+}
+.nav__links .active:hover {
+    color:white;
+    cursor:default;
+}
+
+
+
 button {
-    padding:9px 25px;
-    background-color:blue;
-    border:none;
-    border-radius:50px;
+    padding:20px 45px;
+    background-color:none;
+    border:2px solid blue;
     transition: all 0.2s ease 0s;
     cursor:pointer;
 }
@@ -66,9 +88,175 @@ button:hover {
 }
 
 .start {
-    text-align:center;
+    width:80%;
+    height:80vh;
+    margin:auto;
+    padding-top:14vh;
+}
+
+.section_one {
+    border-radius:15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 3, 195);
+    height:80vh;
+    margin:auto;
+    
+}
+
+.section_one h1, h2 {
+    background:none;
+}
+.section_one h1 {
+    margin-top:10vh;
+   font-family: 'Kitchen police', sans-serif;
+   text-shadow: 10px 10px 0 rgb(8, 0, 113);
+   font-size:11rem;
+   text-align: center;
+   padding:0;
+}
+
+ .section_one .line_break {
+    width:50vh;
+    height:0.1vh;
+    margin:10px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.section_one  h2 {
+    letter-spacing: 2px;
+    font-size:1.4rem;
+    text-transform:uppercase;
+    text-align: center;
+    margin-top:4vh;
+    font-weight: 400;
+ }
+
+
+ .section_two {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height:80vh;
+}
+
+.section_two .left__side {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left:20vh;
+    width:50vh;
+}
+.section_two .left__side h2 {
+    font-family: 'Kitchen police', sans-serif;
+    font-size:4.4rem;
+    text-transform:uppercase;
+    text-align: left;
+    margin-top:20px;
+    font-weight: 400;
+}
+.section_two .line_break {
+    width:5vh;
+    height:1.8vh;
+    margin:10px 0;
+    background-color: rgb(0, 3, 195);
+}
+.section_two .left__side p {
+    font-size:1.2rem;
+    text-align: left;
+    margin-top:20px;
+    font-weight: 100;
+    color:rgb(215, 215, 215);
+}
+
+
+.section_two .right__side {
+    justify-content: center;
+    width:70vh;
+    height:70vh;
+    border:2px solid white;
+}
+
+
+.section_three  {
+    position: relative;
+    margin-top:4vh;
+    
+}
+.section_three h2 {
+    text-align: center;
+    align-items: center;
+    margin:0;
+    position: relative;
+    top:9vh;
+
+}
+
+
+.section_three .colors {
+    background:none;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin:auto;
+    width:60%;
+    height:40vh;
+    position: relative;
+}
+
+
+
+
+.section_three .colors .rectangle__one, .rectangle__two,
+.rectangle__three, .rectangle__four {
+    width:15vh;
+    height:15vh;
+    border-radius: 10px;
+}
+
+.section_three .rectangle__one {
+    background-color: white;
+}
+.section_three .rectangle__two {
+    background-color: rgb(0, 3, 195);
+}
+.section_three.rectangle__three {
+    border:2px solid white;
+}
+.section_three .rectangle__four {
+    background-color: blue;
+}
+
+.section_four {
+    margin-top:20vh;
+    background-color: rgb(0, 3, 195);
+    height:40vh;
     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
+    left:0;
+    right:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section_four h2 {
+    margin-top:5vh;
+    text-shadow: 10px 10px 0 rgb(8, 0, 113);
+    font-family: 'Kitchen police', sans-serif;
+    font-size:4.4rem;
+    text-transform:uppercase;
+    text-align: center;
+    font-weight: 400;
+}
+.section_four p{
+    background: none;
+    margin-top:3vh;
+    text-shadow: 5px 5px 0 rgb(8, 0, 113);
+    font-size:1.5rem;
+    text-align: center;
+    font-weight: 400;
 }
