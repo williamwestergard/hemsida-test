@@ -4,27 +4,28 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #080808;
 }
 
 :root {
     --fs-xl: clamp(4.5rem, 8vw + 1rem, 12rem);
     --fs-600: 3.5rem;
-    --fs-500: 1.4rem;
+    --fs-500: clamp(1.1rem, 1.3vw, 1.4rem);
     --fs-400: 1rem;
 }
 
 body {
     color:#edf0f1;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #080808;
 }
 
 header {
+    background-color: black;
     display:flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
-    padding:30px 10%;  
+    padding:20px 10%;  
     position: fixed; 
     width:100%;
     z-index: 1000000;
@@ -38,7 +39,7 @@ header {
 .logo {
     width:150px;
     position: absolute;
-    top:60px;
+    top:53px;
     left:50%;
     transform: translate(-50%, -50%);
     
@@ -81,6 +82,7 @@ li, a, button {
 
 
 button {
+    background-color: black;
     padding:20px 45px;
     background-color:none;
     border:2px solid blue;
@@ -91,13 +93,27 @@ button {
 button:hover {
     color:rgb(214, 214, 214);
     background-color:rgb(0, 0, 186);
+    border:2px solid rgb(0, 0, 186);
 }
+
+.button_active {
+    background-color:blue;
+    padding:20px 48px;
+    cursor:default;
+    pointer-events: none;
+}
+
+
+
+
+
+
 
 .start {
     width:80%;
     height:80vh;
     margin:auto;
-    padding-top:14vh;
+    padding-top:16vh;
 }
 
 .section_one {
@@ -116,7 +132,7 @@ button:hover {
     background:none;
 }
 .section_one h1 {
-    margin-top:10vh;
+    margin-top:12vh;
    font-family: 'Kitchen police', sans-serif;
    text-shadow: 10px 10px 0 rgb(8, 0, 113);
    font-size:var(--fs-xl);
@@ -127,7 +143,7 @@ button:hover {
  .section_one .line_break {
     width:50vh;
     height:0.1vh;
-    margin:10px 0;
+    margin:-5px 0 20px 0;
     background-color: rgb(255, 255, 255);
 }
 
@@ -136,7 +152,7 @@ button:hover {
     font-size:var(--fs-500);
     text-transform:uppercase;
     text-align: center;
-    margin-top:4vh;
+    margin-top:0vh;
     font-weight: 400;
  }
 
@@ -167,13 +183,15 @@ button:hover {
 .section_two .line_break {
     width:5vh;
     height:1.8vh;
-    margin:10px 0;
+    margin:18px 0;
     background-color: rgb(0, 3, 195);
 }
+
 .section_two .left__side p {
+    background: none;
     font-size:var(--fs-400);
     text-align: left;
-    margin-top:20px;
+    margin-top:0px;
     font-weight: 100;
     color:rgb(215, 215, 215);
 }
@@ -190,6 +208,7 @@ button:hover {
 .section_three  {
     position: relative;
     margin-top:4vh;
+    margin-bottom:6vh;
     
 }
 .section_three h2 {
@@ -197,7 +216,7 @@ button:hover {
     align-items: center;
     margin:0;
     position: relative;
-    top:9vh;
+    top:6vh;
 
 }
 
@@ -238,9 +257,9 @@ button:hover {
 }
 
 .section_four {
-    margin-top:20vh;
+    margin-top:0vh;
     background-color: rgb(0, 3, 195);
-    height:40vh;
+    height:130vh;
     position:absolute;
     left:0;
     right:0;
@@ -250,8 +269,8 @@ button:hover {
     flex-direction: column;
 }
 .section_four h2 {
-    margin-top:5vh;
-    text-shadow: 10px 10px 0 rgb(8, 0, 113);
+    margin-top:-10vh;
+    text-shadow: 6px 6px 0 rgb(8, 0, 113);
     font-family: 'Kitchen police', sans-serif;
     font-size:var(--fs-600);
     text-transform:uppercase;
@@ -266,3 +285,127 @@ button:hover {
     text-align: center;
     font-weight: 400;
 }
+
+.section_four .container {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    align-items:baseline;
+    position: relative;
+    gap:10vh;
+    top:10vh;
+}
+.section_four .container .left__side, .right__side{
+    width:75vh;
+    height:75vh;
+    background-color: black;
+}
+
+.section_five {
+    margin-top:180vh;
+    background:none;
+    height:50vh;
+    position: relative;
+    display:flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-direction: row;
+}
+
+.section_five h2 {
+    margin-top:5vh;
+    text-shadow: 6px 6px 0 rgb(8, 0, 113);
+    font-family: 'Kitchen police', sans-serif;
+    font-size:var(--fs-500);
+    text-transform:uppercase;
+    text-align: center;
+    font-weight: 400;
+}
+
+.section_five .footer__left, .footer__middle, .footer__right {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.section_five .footer__left h2 {
+    margin-left:-120px;
+    margin-top:-100px;
+    position: absolute;
+    font-size:3rem;
+}
+
+.section_five .footer__left h3, .footer__middle h3, .footer__right h3   {
+    margin-left:-15px;
+    font-size:1.4rem;
+}
+
+
+.section_five .footer__left ul li, .footer__middle ul li, .footer__right ul li  {
+    margin:10px 0 10px 0;
+    color:rgb(206, 206, 206);
+    font-size:0.9rem;
+}
+
+.footer__middle p {
+    color:rgb(206, 206, 206);
+    font-size:0.9rem;
+}
+
+
+
+.section_five .footer__right ul li a  {
+    margin:10px 0 10px 0;
+    color:rgb(206, 206, 206);
+    font-size:0.9rem;
+}
+.section_five .footer__right ul li a:hover  {
+    color:rgb(172, 172, 172);
+}
+
+
+
+.lankar {
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+}
+
+.lankar .lankar_flex  h1 {
+    text-align: center;
+    margin-bottom:3vh;
+    text-shadow: 6px 6px 0 rgb(8, 0, 113);
+    font-family: 'Kitchen police', sans-serif;
+    font-size:var(--fs-600);
+    text-transform:uppercase;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+.lankar_flex {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3vh;
+}
+
+.lankar_flex a {
+   background-color:blue;
+   box-shadow: 3px 3px 0 rgb(8, 0, 113);
+   padding:17px 65px;
+   border-radius: 15px;
+   width:50vh;
+   font-size: 17px;
+   text-align: center;
+   cursor:pointer;
+}
+.lankar_flex a:hover {
+    color:rgb(192, 192, 192);
+    background-color:rgb(0, 0, 181);
+    box-shadow: 3px 3px 0 rgb(8, 0, 113);
+    cursor:pointer;
+ }
