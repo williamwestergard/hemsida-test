@@ -8,9 +8,10 @@
 
 :root {
     --fs-xl: clamp(4.5rem, 8vw + 1rem, 12rem);
-    --fs-600: 3.5rem;
+    --fs-600: clamp(3.5rem, 4.3vw, 4.7rem);
     --fs-500: clamp(1.1rem, 1.3vw, 1.4rem);
-    --fs-400: 1rem;
+    --fs-400: clamp(1rem, 1vw, 1.2rem);
+    --fs-300: clamp(0.9rem, 1vw, 1rem);
 }
 
 body {
@@ -296,11 +297,23 @@ button:hover {
     gap:10vh;
     top:10vh;
 }
-.section_four .container .left__side, .right__side{
+.section_four .left__side, .section_four .right__side{
     width:75vh;
     height:75vh;
+    border-radius: 20px;
     background-color: black;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
+
+.section_four .left__side p, .section_four .right__side p{
+    text-align: center;
+    align-items: center;
+    font-size:var(--fs-400);
+}
+
 
 .section_five {
     margin-top:180vh;
@@ -332,7 +345,7 @@ button:hover {
     margin-left:-120px;
     margin-top:-100px;
     position: absolute;
-    font-size:3rem;
+    font-size:clamp(3rem, 3vw, 3.5rem);
 }
 
 .section_five .footer__left h3, .footer__middle h3, .footer__right h3   {
@@ -344,12 +357,12 @@ button:hover {
 .section_five .footer__left ul li, .footer__middle ul li, .footer__right ul li  {
     margin:10px 0 10px 0;
     color:rgb(206, 206, 206);
-    font-size:0.9rem;
+    font-size:var(--fs-300);
 }
 
 .footer__middle p {
     color:rgb(206, 206, 206);
-    font-size:0.9rem;
+    font-size:var(--fs-300);
 }
 
 
@@ -357,7 +370,7 @@ button:hover {
 .section_five .footer__right ul li a  {
     margin:10px 0 10px 0;
     color:rgb(206, 206, 206);
-    font-size:0.9rem;
+    font-size:var(--fs-300);
 }
 .section_five .footer__right ul li a:hover  {
     color:rgb(172, 172, 172);
@@ -399,7 +412,7 @@ button:hover {
    padding:17px 65px;
    border-radius: 15px;
    width:50vh;
-   font-size: 17px;
+   font-size:var(--fs-300);
    text-align: center;
    cursor:pointer;
 }
