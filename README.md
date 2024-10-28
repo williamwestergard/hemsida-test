@@ -1,3 +1,3 @@
-# test_sida
+# Om Projektet
 
-Test för att se hur man lägger upp en hemsida på github.
+Ett test för att se hur man lägger upp en hemsida på github.
